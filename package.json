@@ -1,0 +1,34 @@
+{
+  "name": "faucet-api",
+  "version": "1.0.0",
+  "description": "A Cool Fast REST APIs for Blockchain Faucet",
+  "author": "Mulander-J <mulander_j@outlook.com>",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "scripts": {
+    "bootstrap": "npm install",
+    "clean": "rimraf node_modules & rm -r package-lock.json & npm cache clean --force",
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./src/index.js",
+    "start": "node ./src/index.js",
+    "pm2":"pm2 start ./src/index.js --name 'FAUET/NODEJS'"
+  },
+  "dependencies": {
+    "boom": "^7.2.2",
+    "fastify": "3.20.1",
+    "fastify-env": "2.1.1",
+    "fastify-helmet": "5.3.2",
+    "fastify-mongodb": "^0.9.1",
+    "fastify-plugin": "3.0.0",
+    "fastify-logger": "1.0.1",
+    "fastify-cors": "6.0.2",
+    "fastify-rate-limit": "5.6.0",
+    "mongoose": "^5.3.14",
+    "pino-pretty": "5.1.3",
+    "under-pressure": "5.7.0",
+    "ethereumjs-tx": "2.1.2",
+    "web3": "1.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

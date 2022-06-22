@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  # mongodb:
+  #   image: mongo
+  #   container_name: colaMongo
+  #   restart: always
+  #   ports:
+  #     - 27018:27017
+  #   volumes:
+  #     - ~/mongoData/db:/data/db
+  #   networks:
+  #     colaNet:
+  #       aliases:
+  #         - mongo.cola.ai      
+  nodeApi:
+    image: faucet_api
+    container_name: faucet.v1
+    restart: always
+    build: .
+    command: "npm start"
+    volumes:
+      - .env:/usr/src/app/.env
+      - contract.base.json:/usr/src/app/src/config/contract.base.json
+      - ./logs:/usr/src/app/logs
+    # depends_on:
+    #   - mongodb
+    ports:
+      - 3699:3699
+    environment:
+      - TZ=Asia/Shanghai      
+#     networks:
+#       colaNet:
+#         aliases:
+#           - api.cola.ai
+# networks:
+#   colaNet:
+#     external:
+#       name: cola.ai
