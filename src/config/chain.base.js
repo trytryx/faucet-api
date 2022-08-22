@@ -1,17 +1,16 @@
 const Contracts = require('./contract.base.json')
 module.exports={
-    97:{
-        "chainId": 97,
-        "test": true,
-        "name": "BSC_TEST",
-        "assets": Contracts[97] || [],
+    137:{
+        "chainId": 137,
+        "test": false,
+        "name": "EPIC",
+        "assets": Contracts[137] || [],
 		"nodes": [
-			"https://data-seed-prebsc-1-s1.binance.org:8545/",
-			"https://data-seed-prebsc-2-s1.binance.org:8545/",
-			"http://data-seed-prebsc-1-s2.binance.org:8545/",
-			"http://data-seed-prebsc-2-s2.binance.org:8545/",
-			"https://data-seed-prebsc-1-s3.binance.org:8545/",
-			"https://data-seed-prebsc-2-s3.binance.org:8545/",
+			"https://polygon-rpc.com/",
+			"https://rpc-mainnet.matic.network/",
+			"https://rpc-mainnet.maticvigil.com/",
+			"https://rpc-mainnet.matic.quiknode.pro/",
+			
 		],
     },
     56:{
