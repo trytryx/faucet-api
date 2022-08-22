@@ -2,7 +2,7 @@ module.exports = {
     2024: {
         name: '20/24h',
         expired_at: 24 * 3600 * 1000,
-        amount: 20
+        amount: 25000
     },
     1012: {
         name: '10/12h',
