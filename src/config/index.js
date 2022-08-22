@@ -8,7 +8,7 @@ module.exports = {
             required: [ 'ETH_WALLET_PUB', 'ETH_WALLET_PRI' ],
             properties: {
                 APP_PORT: { type: 'string', default: 3699},
-                APP_HOST: { type: 'string', default: '127.0.0.1'},
+                APP_HOST: { type: 'string', default: '0.0.0.0'},
                 DB_MONGO: { type: 'string', default: 'mongodb://localhost/faucet'},
                 ETH_WALLET_PUB: { type: 'string', default: '0x1948d7CE4f278EaaB34659634Da5E38c0B8De8Ad'},
                 ETH_WALLET_PRI: { type: 'string', default: '0x00ab48e1021132ef8a65acc25c9a33de08523a1bce722403f768a18afd531734'}
